@@ -1,0 +1,580 @@
+/* ОСНОВНІ НАЛАШТУВАННЯ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0b1020, #14243d, #0b1020);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+header h2 {
+    font-size: 25px;
+    color: #55c8ff;
+    letter-spacing: 1px;
+}
+
+nav {
+    display: flex;
+    gap: 15px;
+}
+
+nav button {
+    background: transparent;
+    border: none;
+    color: #cbd5e1;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+nav button:hover {
+    color: #55c8ff;
+}
+
+nav button.active {
+    color: #55c8ff;
+}
+
+/* MAIN */
+
+main {
+    flex: 1;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+main h1 {
+    font-size: 55px;
+    margin-bottom: 15px;
+    color: #55c8ff;
+    animation: appear 0.8s ease;
+}
+
+main > p {
+    color: #a9b8cc;
+    font-size: 18px;
+    margin-bottom: 55px;
+}
+
+/* MENU CARDS */
+
+.menu {
+    max-width: 750px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.menu-card {
+    width: 100%;
+    padding: 25px;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.menu-card h2 {
+    font-size: 21px;
+    margin-bottom: 8px;
+}
+
+.menu-card p {
+    color: #a9b8cc;
+    font-size: 15px;
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+    border-color: #55c8ff;
+    background: rgba(85, 200, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 150, 255, 0.12);
+}
+
+#definition-page,
+#ukraine-page,
+#comparison-page {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 40px;
+
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+
+    animation: appear 0.5s ease;
+}
+
+#definition-page h1,
+#ukraine-page h1,
+#comparison-page h1 {
+    color: #55c8ff;
+    font-size: 36px;
+    margin-bottom: 25px;
+}
+
+#definition-page p,
+#ukraine-page p {
+    color: #d0dbe8; 
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+#ukraine-page ul {
+    color: #d0dbe8;
+    font-size: 18px;
+    line-height: 1.5;
+    padding-left: 20px;
+}
+
+#back-home,
+#back-ukraine,
+#back-comparison {
+    width: 55px;
+    height: 55px;
+
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+
+    background: rgba(85, 200, 255, 0.15);
+    color: #55c8ff;
+
+    border: 1px solid rgba(85, 200, 255, 0.4);
+    border-radius: 50%;
+
+    font-size: 25px;
+    cursor: pointer;
+
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+}
+
+#back-home:hover,
+#back-ukraine:hover,
+#back-comparison:hover {
+    background: #168dcc;
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 150, 255, 0.3);
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 22px;
+    color: #718096;
+    font-size: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ANIMATIONS */
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+    header {
+        padding: 20px;
+    }
+
+    main {
+        padding: 60px 20px;
+    }
+
+    main h1 {
+        font-size: 38px;
+    }
+
+    .menu-card {
+        padding: 20px;
+    }
+}
+
+/* ABOUT PAGE */
+
+#about-page {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    animation: appear 0.5s ease;
+}
+
+.about-card {
+    width: 100%;
+    max-width: 500px;
+    padding: 45px 35px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(85, 200, 255, 0.2);
+    border-radius: 25px;
+
+    backdrop-filter: blur(15px);
+
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+}
+
+.author-avatar {
+    width: 90px;
+    height: 90px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+    background: linear-gradient(135deg, #168dcc, #55c8ff);
+
+    color: white;
+    font-size: 42px;
+    font-weight: bold;
+
+    box-shadow: 0 0 30px rgba(85, 200, 255, 0.3);
+}
+
+.about-card h1 {
+    color: #55c8ff;
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.about-card h2 {
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.author-status {
+    color: #55c8ff;
+    font-size: 15px;
+}
+
+.about-divider {
+    width: 70px;
+    height: 3px;
+
+    margin: 25px auto;
+
+    background: #55c8ff;
+    border-radius: 10px;
+}
+
+.about-description {
+    color: #a9b8cc;
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+.technologies {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.technologies span {
+    padding: 8px 15px;
+
+    color: #55c8ff;
+    background: rgba(85, 200, 255, 0.1);
+
+    border: 1px solid rgba(85, 200, 255, 0.2);
+    border-radius: 20px;
+
+    font-size: 13px;
+}
+
+.author-footer {
+    margin-top: 30px;
+    color: #718096;
+    font-size: 13px;
+}
+
+/* DEFINITION & UKRAINE CARDS */
+
+.definition-cards,
+.ukraine-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.definition-card,
+.ukraine-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.definition-card:hover,
+.ukraine-card:hover {
+    border-color: #55c8ff;
+    background: rgba(85, 200, 255, 0.08);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(78, 181, 255, 0.3);
+}
+
+.definition-card summary,
+.ukraine-card summary {
+    padding: 22px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    list-style: none;
+}
+
+.definition-card summary::-webkit-details-marker,
+.ukraine-card summary::-webkit-details-marker {
+    display: none;
+}
+
+.definition-card summary::after,
+.ukraine-card summary::after {
+    content: "+";
+    float: right;
+    color: #55c8ff;
+    font-size: 25px;
+}
+
+.definition-card[open] summary::after,
+.ukraine-card[open] summary::after {
+    content: "−";
+}
+
+.definition-card[open],
+.ukraine-card[open] {
+    border-color: rgba(85, 200, 255, 0.4);
+    background: rgba(85, 200, 255, 0.07);
+}
+
+.definition-card p,
+.ukraine-card p {
+    padding: 0 22px 22px;
+}
+
+/* UKRAINE STATISTICS */
+
+.ukraine-card ul {
+    padding: 0 25px 25px 45px;
+}
+
+/* COUNTRY COMPARISON */
+
+.country-selector {
+    padding: 25px;
+    margin-bottom: 20px;
+
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 15px;
+
+    text-align: center;
+    transition: 0.3s;
+}
+
+.country-selector:hover {
+    border-color: #55c8ff;
+    background: rgba(85, 200, 255, 0.08);
+}
+
+.country-selector h2 {
+    color: #55c8ff;
+    margin-bottom: 12px;
+}
+
+.country-selector p {
+    color: #a9b8cc;
+    margin-bottom: 20px;
+}
+
+/* BUTTONS */
+
+#select-1,
+#select-2,
+#compare {
+    padding: 12px 30px;
+
+    background: rgba(85, 200, 255, 0.15);
+    border: 1px solid #55c8ff;
+    border-radius: 10px;
+
+    color: #55c8ff;
+    font-size: 16px;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#select-1:hover,
+#select-2:hover,
+#compare:hover {
+    background: #168dcc;
+    color: white;
+    transform: translateY(-3px);
+}
+
+#compare {
+    display: block;
+    margin: 30px auto;
+    font-weight: bold;
+}
+
+/* COMPARISON TABLE */
+
+#comparison-results {
+    margin-top: 40px;
+    animation: appear 0.5s ease;
+}
+
+#comparison-results h2 {
+    color: #55c8ff;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+#comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+#comparison-table th,
+#comparison-table td {
+    padding: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: left;
+}
+
+#comparison-table th {
+    background: rgba(85, 200, 255, 0.15);
+    color: #55c8ff;
+}
+
+#comparison-table td {
+    background: rgba(255, 255, 255, 0.04);
+    color: #d0dbe8;
+}
+
+#comparison-table tbody tr:hover td {
+    background: rgba(85, 200, 255, 0.1);
+}
+
+/* COUNTRY SELECT */
+
+.country-selector select {
+    width: 100%;
+    max-width: 350px;
+    padding: 14px 18px;
+
+    background: #14243d;
+    color: white;
+
+    border: 1px solid #55c8ff;
+    border-radius: 10px;
+
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+
+    transition: 0.3s;
+}
+
+.country-selector select:hover,
+.country-selector select:focus {
+    border-color: #ffffff;
+    box-shadow: 0 0 15px rgba(85, 200, 255, 0.2);
+}
+
+/* Контейнер карти */
+.world-map-container {
+    margin: 30px 0;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(85, 200, 255, 0.25);
+    border-radius: 20px;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Заголовок карти */
+.world-map-container h2 {
+    color: #55c8ff;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* SVG-карта */
+#world-map {
+    display: block;
+    width: 100%;
+    height: 420px;
+    border: none;
+    border-radius: 12px;
+}
+
+/* Ефект підсвічування контейнера */
+.world-map-container:hover {
+    border-color: #55c8ff;
+    box-shadow: 0 0 25px rgba(85, 200, 255, 0.12);
+    transition: 0.3s;
+}
+
+@media (max-width: 600px) {
+    #world-map {
+        height: 280px;
+    }
+
+    .world-map-container {
+        padding: 12px;
+    }
+}

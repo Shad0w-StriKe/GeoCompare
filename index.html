@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GeoCompare</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h2>GeoCompare</h2>
+
+        <nav>
+            <button id="home-button" class="active">Головна</button>
+            <button id="about-button">Про нас</button>
+        </nav>
+    </header>
+
+    <main>
+        <h1>GeoCompare</h1>
+        <p>Досліджуй та порівнюй країни світу</p>
+
+        <section class="menu">
+
+            <button class="menu-card" id="definition">
+                <h2>Визначення</h2>
+                <p>Що таке первинний сектор економіки?</p>
+            </button>
+
+            <button class="menu-card" id="ukraine">
+                <h2>Первинний сектор України</h2>
+                <p>Досліджуй економіку України</p>
+            </button>
+
+            <button class="menu-card" id="comparison">
+                <h2>Порівняння країн</h2>
+                <p>Порівнюй країни між собою</p>
+            </button>
+
+        </section>
+    </main>
+
+    <section id="definition-page" hidden>
+        <h1>Первинний сектор економіки</h1>
+
+        <p>
+            Первинний сектор економіки — це частина економіки,
+            яка займається отриманням природних ресурсів
+            та сировини.
+        </p>
+
+        <div class="definition-cards">
+
+    <details class="definition-card">
+        <summary>Рослинництво</summary>
+        <p>
+            Рослинництво — галузь сільського господарства,
+            що займається вирощуванням культурних рослин.
+            Приклади: пшениця, кукурудза, соняшник, картопля.
+        </p>
+    </details>
+
+    <details class="definition-card">
+        <summary>Тваринництво</summary>
+        <p>
+            Тваринництво — галузь сільського господарства,
+            що займається розведенням і вирощуванням тварин.
+            Приклади: скотарство, свинарство, птахівництво.
+        </p>
+    </details>
+
+    <details class="definition-card">
+        <summary>Лісове господарство</summary>
+        <p>
+            Лісове господарство — діяльність, пов'язана
+            з вирощуванням, охороною та використанням лісів.
+        </p>
+    </details>
+
+    <details class="definition-card">
+        <summary>Рибне господарство</summary>
+        <p>
+            Рибне господарство — діяльність, пов'язана
+            з виловом і вирощуванням риби та інших водних організмів.
+        </p>
+    </details>
+
+    <details class="definition-card">
+        <summary>Добувна промисловість</summary>
+        <p>
+            Добувна промисловість — галузь економіки,
+            що займається видобуванням корисних копалин.
+            Приклади: нафта, природний газ, вугілля, залізна руда.
+        </p>
+    </details>
+
+        </div>
+
+        <button id="back-home">←</button>
+    </section>
+
+    <section id="ukraine-page" hidden>
+        <h1>Первинний сектор України</h1>
+
+        <p>
+            Первинний сектор економіки України включає
+            сільське господарство, лісове господарство,
+            рибне господарство та добувну промисловість.
+        </p>
+
+        <div class="ukraine-cards">
+            
+            <details class="ukraine-card">
+                <summary>Україна має високі глобальні позиції</summary>
+
+                <ul>
+                    <li>1-ше місце у світі за експортом соняшникової олії</li>
+                    <li>2-ге місце за експортом соняшникового шроту (макухи)</li>
+                    <li>4-те місце за експортом ячменю, кукурудзи та насіння ріпаку</li>
+                    <li>5-те місце за експортом висівок та кормового борошна</li>
+                    <li>7-ме місце за експортом пшениці та сої</li>
+                </ul>
+            </details>
+
+                </div>
+
+        <button id="back-ukraine">←</button>
+    </section>
+
+    <section id="comparison-page" hidden>
+        <h1>Порівняння країн</h1>
+        
+        <div class="world-map-container">
+            <h2>Оберіть країни на карті</h2>
+            <object
+                id="world-map"
+                type="image/svg+xml"
+                data="assets/images/world.svg">
+            </object>
+        </div>
+
+        <p class="map-credit">
+            SVG-карта: VectorAtlas.
+        </p>
+
+        <div class="country-selector">
+            <h2>Країна №1</h2>
+            <p>Виберіть першу країну</p>
+
+            <select id="country-select-1">
+                <option value="">Оберіть країну</option>
+                <option value="ukraine">🇺🇦 Україна</option>
+                <option value="germany">🇩🇪 Німеччина</option>
+                <option value="usa">🇺🇸 США</option>
+                <option value="china">🇨🇳 Китай</option>
+                <option value="france">🇫🇷 Франція</option>
+            </select>
+        </div>
+
+        <div class="country-selector">
+            <h2>Країна №2</h2>
+            <p>Виберіть другу країну</p>
+
+            <select id="country-select-2">
+                <option value="">Оберіть країну</option>
+                <option value="ukraine">🇺🇦 Україна</option>
+                <option value="germany">🇩🇪 Німеччина</option>
+                <option value="usa">🇺🇸 США</option>
+                <option value="china">🇨🇳 Китай</option>
+                <option value="france">🇫🇷 Франція</option>
+            </select>
+        </div>
+
+        <button id="compare">Порівняти</button>
+
+        <div id="comparison-results" hidden>
+            <h2>Результати порівняння</h2>
+
+            <table id="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Показник</th>
+                        <th id="country-1-name">Країна №1</th>
+                        <th id="country-2-name">Країна №2</th>
+                    </tr>
+                </thead>
+
+                <tbody id="comparison-body">
+                </tbody>
+            </table>
+        </div>
+
+        <button id="back-comparison">←</button>
+    </section>
+
+    <section id="about-page" hidden>
+
+        <div class="about-card">
+
+            <div class="author-avatar">S</div>
+
+            <h1>Shad0w</h1>
+
+            <h2>Чорний Олександр</h2>
+
+            <p class="author-status">Учень 9 класу</p>
+
+            <div class="about-divider"></div>
+
+            <p class="about-description">
+                Автор та розробник проєкту GeoCompare.
+                Створено в рамках навчального проєкту з географії.
+            </p>
+
+            <div class="technologies">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+            </div>
+
+            <p class="author-footer">Created by Shad0w</p>
+
+        </div>
+
+    </section>
+
+    <footer>
+        <p>Developed by Shad0w</p>
+    </footer>
+
+    <script src="countries.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
